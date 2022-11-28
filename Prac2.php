@@ -14,14 +14,17 @@
         if(isset($_POST['submit'])) {
             function test($val) {
                 //Printing Spaces
-                for ($i = 0; $i <= $val; $i++) {
+                for ($i = 0; $i <= $val; $i++) 
+                {
                     
-                    for ($j=0; $j < $val - $i; $j++) { 
+                    for ($j = 0; $j < $val - $i; $j++) 
+                    { 
                         echo "&nbsp;&nbsp;";
                     }
                     //Print Stars
-                    for ($x=0; $x <= $i; $x++) { 
-                     echo "*";
+                    for ($x = 0; $x <= $i; $x++) 
+                    { 
+                        echo "*";
                     }
                     echo"<br>";
                 }
