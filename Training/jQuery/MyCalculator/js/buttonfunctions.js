@@ -140,6 +140,8 @@ $(document).ready(function () {
         $("#result").val("");
         result = "";
         pointNum = 0;
+        opeExceed = false;
+        inputEmpty = false;
     });
 
 
