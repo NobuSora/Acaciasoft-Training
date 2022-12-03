@@ -4,9 +4,13 @@ $(document).ready(function () {
     var opeExceed = false;
     var inputEmpty = false;
     var pointNum = 0;
+    var pointBool = false;
 
     function validate(){
-        if ($("#result").val().includes('+')) {
+
+        
+        if ($("#result").val().includes('+')) 
+        {
             opeExceed = true;
         }else if ($("#result").val().includes('-'))
         {
@@ -17,6 +21,9 @@ $(document).ready(function () {
         }else if ($("#result").val().includes('/'))
         {
             opeExceed = true;
+        }
+        else if (pointNum == 1){
+            pointBool = true;
         }
         else {opeExceed = false;}
 
@@ -31,7 +38,12 @@ $(document).ready(function () {
         validate();
         if (opeExceed == true || inputEmpty == true) {
             //Do Nothing
-        }else
+        }
+        else if ($("#result").val().length <=1)
+        {
+            //DO Nothing
+        }
+        else
         {
         result = $("#result").val() + $(opeBtn).val();
         $("#result").val(result);
@@ -52,11 +64,12 @@ $(document).ready(function () {
             $("#result").val(result);
             pointNum++;
         }
-        else if (opeExceed == true && pointNum == 1)
+        else if (opeExceed == true && pointNum == 1 && pointBool == true)
         {
             result = $("#result").val() + $(pointBtn).val();
             $("#result").val(result);
             pointNum++;
+            pointBool = false;
         }
 
         
