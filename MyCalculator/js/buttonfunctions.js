@@ -47,6 +47,17 @@ $(document).ready(function () {
         {
         result = $("#result").val() + $(opeBtn).val();
         $("#result").val(result);
+        // $btn = $(opeBtn).val
+        // $.ajax({
+        //     url:'classes/equal.php',
+        //     type: "POST",
+        //     data:{'result':result},
+        //     success: function(msg)
+        //     {
+        //         $('#result').val(msg);
+        //     }
+        // });
+        // }
         }
     }   
     function concat(btnConcat){
